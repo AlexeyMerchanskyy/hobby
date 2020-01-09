@@ -15,14 +15,27 @@
 <!--Панель навигации расположена в самом верху страницы-->
 <div class="w3-top">
 	<div class="w3-bar w3-black w3-wide w3-text-orange w3-padding w3-card">
-		<a href="#home" class="w3-bar-item w3-button  w3-hover-orange"><b>"MJ12"</b> Юра Мерчанский</a>
+		<a href="Index.html" class="w3-bar-item w3-button  w3-hover-orange"><b>"MJ12"</b> Юра Мерчанский</a>
 		<!--Привязка кнопок со ссылками справа, скрытие кнопок при маленьком экране-->
-		<div class="w3-right w3-hide-small">
-			<a href="Jura_2ndpage_mod.html" class="w3-bar-item w3-button  w3-hover-orange">Моделизм</a>
-			<a href="Jura_2ndpage_3dbuild.html" class="w3-bar-item w3-button w3-hover-orange">Интерьерные модели</a>
-			<a href="Jura_3rdpage_bask.html" class="w3-bar-item w3-button w3-hover-orange">Баскетбол</a>
-			<a href="#rest" class="w3-bar-item w3-button w3-hover-orange">Отдых</a>
+		<div class="w3-right w3-hide-medium w3-hide-small">
+			<a href="Jura_2ndpage_mod.html" class="w3-bar-item w3-button  w3-hover-orange w3-hide-medium w3-hide-small">Моделизм</a>
+			<a href="Jura_2ndpage_3dbuild.html" class="w3-bar-item w3-button w3-hover-orange w3-hide-medium w3-hide-small">Интер. модели</a>
+			
+			<a href="Jura_3rdpage_bask.html" class="w3-bar-item w3-button w3-hover-orange w3-hide-medium w3-hide-small">Баскетбол</a>
+			<a href="#rest" class="w3-bar-item w3-button w3-hover-orange w3-hide-medium w3-hide-small">Отдых</a>
 		</div>
+
+		<!-- Маленькая кнопка с полосками -->
+		<div><a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-orange w3-right w3-hide-large" onclick="myFunction()">&#9776;</a>
+		</div>
+
+			<!-- Кнопки в свернутом состоянии -->
+			<div id="demo" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-right">
+				<a href="Jura_2ndpage_mod.html" class="w3-bar-item w3-button w3-border w3-border-orange w3-hover-orange">Моделизм</a>
+				<a href="Jura_2ndpage_3dbuild.html" class="w3-bar-item w3-button w3-border w3-border-orange w3-hover-orange">Интер. модели</a>
+				<a href="Jura_3rdpage_bask.html" class="w3-bar-item w3-button w3-border w3-border-orange w3-hover-orange">Баскетбол</a>
+				<a href="#rest" class="w3-bar-item w3-button w3-border w3-border-orange w3-hover-orange">Отдых</a>
+			</div>
 	</div>
 </div>
 
@@ -31,7 +44,7 @@
 	<img class="w3-image" src="images/architecture.jpg" alt="JuraMerchanskyy" width="1500" height="450">
 	<div class="w3-display-bottommiddle w3-margin-top w3-center">
 		<h1 class="w3-xxlarge w3-text-white"><!--span class="w3-padding w3-black w3-opacity-min"--><b>MJ12</b></span>
-	<span class="w3-hide-small w3-text-light-grey"> Хобби Юры</span></h1>
+	<span class="w3-hide-medium w3-hide-small w3-text-light-grey"> Хобби Юры</span></h1>
 	</div>
 </header>
 
@@ -119,6 +132,18 @@
 		Mobile: +38(096)320-39-95
 	</p>
 </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
 
 </body>
 </html>
